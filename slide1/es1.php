@@ -22,5 +22,7 @@
     
     echo "</table>";
     ?>
+    <br>
+    <a href="slide1.html">torna indietro</a><br> 
 </body>
 </html>
