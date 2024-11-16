@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Triangolini</title>
     <style>body {font-family: monospace;}</style>

@@ -1,9 +1,3 @@
-<html>
-    <head>
-        <title>ITCS</title>
-    </head>
-<body>
-    <h3>controllo credenziali</h3>
 <?php
 $usr=$_POST["username"];
 $pwd=$_POST["password"];
@@ -14,6 +8,3 @@ else {
     echo "benvenuto ". $usr ." nella pagina di amministrazione!";
 }
 ?>    
-</body>
-
-</html>

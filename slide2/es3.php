@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +6,7 @@
 </head>
 <body>
     <H1>Tabella quadrati e cubi</H1>
+    <form method="post" action="">
     <label for="n">Scegli un numero intero N (da 1 a 10):</label>
     <select id="n" name="n">
         <option value="1">1</option>
@@ -22,12 +22,15 @@
         
     </select>    
 <br><br>
+
+<input type="submit"  name="submit" value="Genera tabella" >
+</form>
 <?php
-function generateTable() {
-    $n = $_GET['n'];
+if (isset($_POST['submit'])) {
+    $n = $_POST['n'];
     echo "<table border='1'>";
     echo "<tr><th>Numero</th><th>Quadrato</th><th>Cubo</th></tr>";
-    for($i=1; $i<=$n; $i++) {
+    for ($i = 1; $i <= $n; $i++) {
         echo "<tr>";
         echo "<td>$i</td>";
         echo "<td>".($i*$i)."</td>";
@@ -36,8 +39,10 @@ function generateTable() {
     }
     echo "</table>";
 }
+
 ?>
-<input type="submit"  name="submit" value="Genera tabella" onclick="generateTable()">
+
 
 </body>
+<a href="http://127.0.0.1/esphp/slide2/slide2.html">torna indietro</a><br> 
 </html>

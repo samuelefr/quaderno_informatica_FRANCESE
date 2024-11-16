@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ITCS - Registrazione</title>
+</head>
+<body>
+    <h3>Controllo credenziali</h3>
+
+    <form method="POST" action="es1.php">
+        <!-- Nome -->
+        <label for="nome">Nome (solo caratteri alfabetici e spazio):</label>
+        <input type="text" id="nome" name="nome" required>
+        <br>
+
+        <!-- Cognome -->
+        <label for="cognome">Cognome (solo caratteri alfabetici, spazio e apostrofo):</label>
+        <input type="text" id="cognome" name="cognome" required>
+        <br>
+
+        <!-- Data di nascita -->
+        <label for="data_nascita">Data di nascita (formato: AAAA-MM-GG):</label>
+        <input type="date" id="data_nascita" name="data_nascita" required>
+        <br>
+
+        <!-- Codice Fiscale -->
+        <label for="codice_fiscale">Codice Fiscale (opzionale):</label>
+        <input type="text" id="codice_fiscale" name="codice_fiscale">
+        <br>
+
+        <!-- Email -->
+        <label for="email">Email (obbligatoria):</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <!-- Cellulare -->
+        <label for="cellulare">Cellulare (12 cifre, numerico):</label>
+        <input type="text" id="cellulare" name="cellulare" pattern="^\d{12}$">
+        <br>
+
+        <!-- Indirizzo -->
+        <label for="indirizzo">Indirizzo (via/piazza, CAP, comune, provincia):</label>
+        <input type="text" id="indirizzo" name="indirizzo" required>
+        <br>
+
+        <!-- Nickname -->
+        <label for="nickname">Nickname (diverso da nome e cognome):</label>
+        <input type="text" id="nickname" name="nickname" required>
+        <br>
+
+        <!-- Password -->
+        <label for="password">Password (minimo 8 caratteri, maiuscole, numeri e carattere speciale):</label>
+        <input type="password" id="password" name="password" required pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+        <br>
+
+        <input type="submit" name="submit" value="Registrati">
+    </form>
+</body>
+</html>
