@@ -44,5 +44,25 @@ if (isset($_POST['submit'])) {
 
 
 </body>
-<a href="http://127.0.0.1/esphp/slide2/slide2.html">torna indietro</a><br> 
+<a href="http://127.0.0.1/esphp/slide2/slide2.html">torna indietro</a><br>
+<p>
+<b>1. Scelta del numero:</b><br>
+La parte `form` permette all’utente di scegliere un numero da 1 a 10 con un menu a discesa `select`, che ha le opzioni da 1 a 10. Dopo aver selezionato un numero, l’utente clicca su "Genera tabella".
+<br>
+<b>2. Gestione della scelta con PHP:</b><br>
+Quando l’utente invia il form, PHP verifica che il bottone "Genera tabella" sia stato premuto tramite `isset($_POST['submit'])`. Poi, recupera il valore di `n` selezionato dall'utente con `$_POST['n']`.
+<br>
+<b>3. Creazione della tabella:</b><br>
+PHP inizia a creare una tabella HTML con `echo "(table border='1')";`. La prima riga di intestazione, creata con `echo "<tr><th>Numero</th><th>Quadrato</th><th>Cubo</th></tr>";`, mostra le colonne: Numero, Quadrato e Cubo.
+<br>
+<b>4. Ciclo per calcolo dei valori:</b><br>
+Il ciclo `for ($i = 1; $i <= $n; $i++)` scorre da 1 al valore di `n` scelto dall'utente, e per ogni valore di `i` calcola:
+    - Il numero (`$i`)
+    - Il quadrato di `$i` (`$i * $i`)
+    - Il cubo di `$i` (`$i * $i * $i`)
+   Ogni riga con questi valori viene aggiunta alla tabella.
+<br>
+<b>5. Output della tabella:</b><br>
+Alla fine del ciclo, PHP chiude la tabella con `echo "</table>";`, e questa appare sotto il form con i calcoli dei quadrati e cubi per ogni numero da 1 a `n`.
+</p> 
 </html>

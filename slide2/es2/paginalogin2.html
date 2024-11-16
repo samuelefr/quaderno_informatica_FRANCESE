@@ -17,4 +17,23 @@
         </form>
 </body>
 <a href="http://127.0.0.1/esphp/slide2/slide2.html">torna indietro</a><br> 
+<h3>html</h3><br>
+    <b>1. Recupero dei dati inseriti:</b><br>
+    Il codice recupera i valori inseriti nei campi del form "username" e "password" con `$_POST["username"]` e `$_POST["password"]`.
+    <br>
+    <b>2. Condizione di verifica delle credenziali:</b><br>
+    Utilizzando un `if`, il codice verifica se il nome utente è diverso da "Samuele" o la password è diversa da "password". Se una delle due condizioni è falsa, viene mostrato "Accesso negato!".
+    <br>
+    <b>3. Messaggio di accesso:</b><br>
+    Se invece il nome utente e la password sono entrambi corretti, viene mostrato il messaggio "Benvenuto [nome utente] nella pagina di amministrazione!".
+    </p>
+    <h3>php</h3><br>
+    <p>
+        <b>4. Invio dei dati del form:</b><br>
+        Il form HTML utilizza `method="post"` per inviare i dati in sicurezza alla pagina `login.php`. L'utente inserisce il nome utente e la password, poi clicca "Invia" per inviare i dati.
+        <br>
+        <b>5. Input dell'utente:</b><br>
+        I campi `input type="text"` e `input type="password"` permettono all'utente di inserire il proprio nome utente e la password. `placeholder` fornisce un suggerimento visivo sul contenuto atteso in ciascun campo.
+        </p>
+    <h4>Unica differenza: grazie all isset e alla condizione empty avvisa se l'utente non ha inserito nulla</h4>
 </html>

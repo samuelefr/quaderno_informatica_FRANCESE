@@ -55,4 +55,10 @@
         <input type="submit" name="submit" value="Registrati">
     </form>
 </body>
-</html>
+<a href="http://127.0.0.1/esphp/slide3/slide3.html">torna indietro</a><br>
+<h3>Appunti sul Form di Registrazione</h3>
+<p>
+Il codice PHP e HTML crea un modulo di registrazione con convalida dei dati. I dati inviati tramite il form vengono controllati su base di vari criteri: i campi obbligatori (nome, cognome, data di nascita, email, indirizzo, nickname) devono essere compilati, la data deve essere nel formato corretto (AAAA-MM-GG), il nickname non deve coincidere con nome o cognome, la password deve contenere almeno una lettera maiuscola, un numero e un carattere speciale, mentre il cellulare deve essere composto da 12 cifre numeriche.<br>
+Se ci sono errori nei dati, vengono visualizzati messaggi di errore. Se i dati sono validi, viene mostrato un messaggio di successo con i dati registrati, ma la password non viene mai mostrata per motivi di sicurezza.<br>
+La convalida dell'email è gestita tramite  code filter_var, mentre la password e il cellulare sono convalidati usando espressioni regolari con code preg_match.<br>
+</p>

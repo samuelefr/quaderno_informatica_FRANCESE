@@ -71,3 +71,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     }
 }
 ?>
+<html>
+    <a href="http://127.0.0.1/esphp/slide3/es1/inserimentodati.html">torna indietro</a><br> 
+</html>  
