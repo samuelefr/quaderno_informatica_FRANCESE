@@ -1,10 +1,4 @@
 <?php
-// Funzione per controllare se i dati sono validi
-function valida_data($data) {
-    // Verifica formato della data (AAAA-MM-GG)
-    return preg_match("/^\d{4}-\d{2}-\d{2}$/", $data);
-}
-
 // Verifica se i dati sono stati inviati tramite POST
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     // Recupero dei dati dal form
@@ -27,8 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     }
 
     // Controllo se la data di nascita è valida
-    if (!valida_data($data_nascita)) {
-        $errori[] = "Errore: Data di nascita non valida!";
+    if (!preg_match("/^\d{4}-\d{2}-\d{2}$/", $data_nascita)) {
+        $errori[] = "Errore: Data di nascita non valida! (Formato richiesto: AAAA-MM-GG)";
     }
 
     // Controllo se il nickname è diverso da nome e cognome
@@ -72,5 +66,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 }
 ?>
 <html>
-    <a href="http://127.0.0.1/esphp/slide3/es1/inserimentodati.html">torna indietro</a><br> 
-</html>  
+    <a href="http://127.0.0.1/esphp/slide3/es1/inserimentodati.html">Torna indietro</a><br> 
+</html>
