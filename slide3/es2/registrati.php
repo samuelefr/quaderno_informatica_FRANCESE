@@ -65,3 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login_email']) && iss
     }
 }
 ?>
+<br>
+<html>
+    <a href="http://127.0.0.1/esphp/slide3/slide3.html">Torna indietro</a><br> 
+</html>
