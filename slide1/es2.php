@@ -13,7 +13,7 @@
     $ora = $today->format('H');
     echo "<br>\n Sono le $ora";
     
-    if ($ora >= 18 || $ora < 0) {
+    if ($ora >= 18 || $ora < 0) { 
         echo " Buonasera $paolo";
     } elseif ($ora >= 0 && $ora < 7) {
         echo " Buonanotte $paolo";
